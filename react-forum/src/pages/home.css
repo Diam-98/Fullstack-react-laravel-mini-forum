@@ -1,0 +1,17 @@
+section.feed-page {
+    width: calc(100% - 250px);
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25px;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 620px) {
+
+    section.feed-page {
+        width: 100%;
+    }
+}

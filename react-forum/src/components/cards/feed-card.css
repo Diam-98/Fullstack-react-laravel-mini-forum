@@ -1,0 +1,43 @@
+article.feed {
+    background-color: #fff;
+    width: 80%;
+    box-shadow: 2px 1px 13px 0px #8b8a8b;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+article.feed .card-top {
+    margin: 15px 0;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+.author img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+article.feed .card-bottom {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.response-form {
+    width: 80%;
+}
+
+.response-list {
+    width: 80%;
+    padding: 0 50px;
+    margin: 20px 0;
+}

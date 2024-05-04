@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Assistant", sans-serif;
+    background-color: #f8f8f9;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+@media screen and (max-width: 620px) {
+    main {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+}
+
