@@ -13,7 +13,8 @@ class AuthController extends Controller
 
     use ApiResponseTrait;
 
-    public function register(Request $request){
+    public function register(Request $request)
+    {
         $request->validate([
             'name' => 'string|required',
             'image' => 'image|nullable',
@@ -23,7 +24,7 @@ class AuthController extends Controller
 
         $image = $request->image;
 
-        if($image != null && !$image->getError()){
+        if ($image != null && !$image->getError()) {
             $image = $request->image->store('storage', 'public');
         }
 
@@ -38,7 +39,7 @@ class AuthController extends Controller
 
         return $this->successResponse([
             'token' => $token,
-            'user' => $user
+            'user' => new UserResource($user)
         ], 'User Inscrit avec succes');
 
     }
@@ -57,13 +58,13 @@ class AuthController extends Controller
 
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth()->attempt($credentials)) {
+        if (!$token = auth()->attempt($credentials)) {
             return $this->unauthorizedResponse('Login ou mot de passe inccorect');
         }
 
         return $this->successResponse([
             'token' => $token,
-            'user' => Auth::user()
+            'user' => new UserResource(Auth::user())
         ], 'User connecte avec succes');
     }
 
